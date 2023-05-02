@@ -9,3 +9,4 @@ spec:
       targetPort: 9876
   selector:
     app: simple-deployment
+

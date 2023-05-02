@@ -1,0 +1,27 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: simple-fanout-example
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - host: foo.bar.com
+    http:
+      paths:
+      - path: /simple
+        pathType: Prefix
+        backend:
+          service:
+            name: simple-internal-service
+            port:
+              number: 80
+      - path: /nginx
+        pathType: Prefix
+        backend:
+          service:
+            name: simple-internal-service2
+            port:
+              number: 81

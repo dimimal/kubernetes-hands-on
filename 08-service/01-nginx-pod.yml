@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-nginx 
+  template:
+    metadata:
+      labels:
+        app: simple-nginx 
+    spec:
+      containers:
+        - name: nginx-pod
+          image: nginx:stable-alpine3.17-slim
+          ports:
+            - containerPort: 9875
