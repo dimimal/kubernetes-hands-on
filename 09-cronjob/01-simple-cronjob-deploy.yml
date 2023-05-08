@@ -19,3 +19,6 @@ spec:
           command: ["perl", "-Mbignum=bpi", "-wle", "print bpi(1000)"]
           ports:
             - containerPort: 9876
+
+# It crashes and ends up in crashbackloop since the restartPolicy is by
+# default always. Cannot set to never since its a deployment kind
