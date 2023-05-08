@@ -1,0 +1,16 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: simple-job-to-cron
+spec:
+  schedule: "*/2 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: c-cron
+              image: busybox
+              command: ["sh", "-c", "echo Processing item $ITEM && sleep 5"]

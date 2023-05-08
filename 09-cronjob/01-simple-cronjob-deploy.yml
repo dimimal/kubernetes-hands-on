@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-cronjob-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-cronjob-deploy
+  template:
+    metadata:
+      labels:
+        app: simple-cronjob-deploy
+    spec:
+      containers:
+        - name: pi
+          image: perl
+          command: ["perl", "-Mbignum=bpi", "-wle", "print bpi(1000)"]
+          ports:
+            - containerPort: 9876
