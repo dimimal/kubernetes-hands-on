@@ -9,5 +9,5 @@ spec:
       image: polinux/stress
       resources:
         requests:
-          memory: 1000Gi # Let's hope you have less than 1000GB of RAM cores on your testing machine
+          memory: 1000Gi # Let's hope you have less than 1000GB of RAM on your testing machine
       command: ["stress"]
