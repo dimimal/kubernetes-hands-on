@@ -81,7 +81,7 @@ spec:
 
 You need to specify a `weight` and a `podAffinityTerm`.
 
-For a complete overview of all the options, have a look at the [specs](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/scheduling/podaffinity.md).
+For a complete overview of all the options, have a look at the [specs](https://github.com/kubernetes/design-proposals-archive/blob/main/scheduling/nodeaffinity.md).
 
 ### `affinity`
 
@@ -97,7 +97,7 @@ Delete the pods, and try to use `preferredDuringSchedulingIgnoredDuringExecution
 
 ## Node affinity
 
-Node affinity is very close to pod affinity. Instead of specifying a `podAffinity` you define a `nodeAffinity`. As above, complete overview of all the options, have a look at the [specs](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/scheduling/nodeaffinity.md).
+Node affinity is very close to pod affinity. Instead of specifying a `podAffinity` you define a `nodeAffinity`. As above, complete overview of all the options, have a look at the [specs](https://github.com/kubernetes/design-proposals-archive/blob/main/scheduling/nodeaffinity.md).
 
 Each resource in Kubernetes can have labels, even nodes. You can see them with `kubectl`:
 
