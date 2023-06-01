@@ -51,7 +51,7 @@ As you can see the manifest is very close to the one of a deployment. Apply the 
 Look at the pods generated, see how they are generated. Connect to one of the pods:
 
 ```sh
-kubectl exec -ti web-0 /bin/bash
+kubectl exec -ti web-0 -- /bin/bash
 ```
 
 Write a file in the volume `www`. Terminate the same pod. See what happens. Reconnect to the pod, look at volume `www`. What can you see?
