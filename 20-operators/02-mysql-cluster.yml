@@ -6,7 +6,7 @@ metadata:
   namespace: default
 ---
 kind: RoleBinding
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: mysql-agent
   namespace: default
@@ -19,10 +19,20 @@ subjects:
     name: mysql-agent
     namespace: default
 ---
-apiVersion: mysql.oracle.com/v1alpha1
-kind: Cluster
+apiVersion: mysql.oracle.com/v2
+kind: InnoDBCluster
 metadata:
   name: my-app-db
-  namespace: default
 spec:
-  members: 1
+  secretName: mypwds
+  tlsUseSelfSigned: true
+  instances: 1
+  # router:
+  #   instances: 1
+# apiVersion: mysql.oracle.com/v1
+# kind: Cluster
+# metadata:
+#   name: my-app-db
+#   namespace: default
+# spec:
+#   instances: 1

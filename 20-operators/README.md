@@ -6,9 +6,12 @@ In the previous section we saw what a controller is and what it does: interact w
 
 In fact, the Kubernetes API is more powerful. You can enhance it with your own objects. That's what is called Custom Resource Definition or CRD for short. When you add your own CRDs and your own controllers you get an operator.
 
-We will not build on operator in this chapter, but we will rely on an existing operation, the [mysql-operator](https://github.com/oracle/mysql-operator).
+We will not build on operator in this chapter, but we will rely on an existing operation, the [mysql-operator](https://github.com/mysql/mysql-operator/tree/trunk/deploy).
 
 Start by [deploying the operator](https://github.com/oracle/mysql-operator/blob/master/docs/tutorial.md). For ease of installation, the operator is included in this repo in the file [`01-mysql-operator.yml`](./01-mysql-operator.yml).
+
+We are going to follow the official mySql documentation about the operator [here](https://dev.mysql.com/doc/mysql-operator/en/mysql-operator-introduction.html). This example applies the operator
+using kubectl and helm.
 
 ```sh
 $ kubectl apply -f 20-operators/01-mysql-operator.yml
