@@ -15,6 +15,13 @@ Part of this tutorial is derived from the official k8s documentation
 
 Nothing to see here.
 
+Run the following command to check the new roles:
+
+```sh
+kubectl get roles -n application
+```
+
+
 ## Clean up
 
 ```sh
