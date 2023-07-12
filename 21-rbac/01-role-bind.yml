@@ -4,6 +4,7 @@ metadata:
   name: user-read-bind
   namespace: application
 subjects:
+  # We dfine a user which plays a role, abide by the role rules
 - kind: User
   name: user-reader
   apiGroup: rbac.authorization.k8s.io

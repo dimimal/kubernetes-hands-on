@@ -8,6 +8,7 @@ RBAC is a mechanism in K8s that allows us to define user privileges on Kubernete
 [source](https://blog.aquasec.com/kubernetes-verbs?ref=anaisurl.com)
 
 RBAC is enabled in your cluster by default.
+For minikube check the shell script to enable RBAC support
 
 ## Exercices
 
