@@ -63,6 +63,9 @@ $ brew cask install minikube
 [...]
 
 $ minikube start
+or 
+
+$ bash enable_mikube.sh
 [...]
 🏄  Done! Thank you for using minikube!
 
