@@ -1,5 +1,10 @@
 # Kubernetes Hands on
 
+<p align="center" />
+  <img src="./images/k8s_logo.png" width="350" />
+</p>
+![screen](k8s_logo.png)
+
 1. [Prerequisites](#prerequisites)
 1. [What it is not](#what-it-is-not)
 1. [What is Kubernetes? What is it used for?](#what-is-kubernetes-what-is-it-used-for)
