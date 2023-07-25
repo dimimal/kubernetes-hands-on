@@ -62,15 +62,28 @@ We now want to see the authorization issues:
 kubectl config use-context user-context
 ```
 
-// This shows the context you are in, it should be user-context
+This command shows the context you are in, it should be user-context
+
+```bash
 kubectl config current-context
-// The following command raises error, as the user doesn't have priviliges
+```
+
+Try to run the following command: 
+What do you observe?
+
+```bash
 kubectl create namespace ns-test
+```
 
 Now switching back to minikube context and apply the configs about the new role and role-binding
 kubectl config use-context minikube
 
 Run the following command to check the new roles:
+
+```sh
+kubectl get roles -n application
+kubectl get rolebindings -n application
+```
 
 
 Remember that when you wish to change the role for a user, the name variables are immutable. You have to delete the role/rolebindings and recreate them again if you wish your actions to have an effect. 
@@ -82,10 +95,6 @@ kubectl delete role <NAME_OF_ROLE> -n <NAMESPACE>
 kubectl delete rolebinding <NAME_OF_ROLEBINDING> -n <NAMESPACE>
 ```
 
-```sh
-kubectl get roles -n application
-kubectl get rolebindings -n application
-```
 
 The following command will fail:
 ```bash
