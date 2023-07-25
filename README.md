@@ -1,9 +1,8 @@
 # Kubernetes Hands on
 
 <p align="center" />
-  <img src="./images/k8s_logo.png" width="350" />
+  <img src="./images/k8s_logo.svg" width="140" />
 </p>
-![screen](k8s_logo.png)
 
 1. [Prerequisites](#prerequisites)
 1. [What it is not](#what-it-is-not)
